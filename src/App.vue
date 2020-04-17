@@ -1,5 +1,18 @@
 <template>
-  <div id="app">
+  <div id="app" class="container">
+
+    <div class="row mt-5" v-if="arrPositive.length > 0">
+
+      <div class="col">
+        <h2>Positive</h2>
+        <line-chart
+          :chartData="arrPositive"
+          :options="chartOptions"
+          :label="Positive">
+        </line-chart>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -7,11 +20,12 @@
 
 import axios from "axios";
 import moment from "moment";
+import LineChart from "./components/LineChart";
 
 export default {
   name: 'App',
   components: {
-
+    LineChart
   },
   data() {
     return {
@@ -21,7 +35,11 @@ export default {
       arrInIcu: [],
       arrOnVentilators: [],
       arrRecovered: [],
-      arrDeaths: []
+      arrDeaths: [],
+      chartOptions: {
+        responsive:true,
+        maintainAspectRatio: false
+      }
     };
   },
   async created() {
@@ -45,7 +63,7 @@ export default {
       this.arrOnVentilators.push({ date, total: onVentilatorCurrently });
       this.arrRecovered.push({ date, total: recovered });
       this.arrDeaths.push({ date, total: death });
-      
+
     })
   }
 };
