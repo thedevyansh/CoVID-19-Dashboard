@@ -1,14 +1,89 @@
 <template>
   <div id="app" class="container">
 
+    <div class="row mt-5">
+
+      <div class="col">
+        <h2 class="text-center" style="font-family: Gotham;">
+          COVID-19 STATISTICS</h2>
+      </div>
+
+    </div>
+
     <div class="row mt-5" v-if="arrPositive.length > 0">
 
       <div class="col">
-        <h2>Positive</h2>
+        <h2 class="text-center">positive.</h2>
         <line-chart
           :chartData="arrPositive"
           :options="chartOptions"
-          :label="Positive">
+          label="Positive"
+          :chartColors="positiveChartColors">
+        </line-chart>
+      </div>
+    </div>
+
+    <div class="row mt-5" v-if="arrHospitalized.length > 0">
+
+      <div class="col">
+        <h2 class="text-center">hospitalized.</h2>
+        <line-chart
+          :chartData="arrHospitalized"
+          :options="chartOptions"
+          label="Hospitalized"
+          :chartColors="hospitalizedChartColors">
+        </line-chart>
+      </div>
+    </div>
+
+    <div class="row mt-5" v-if="arrInIcu.length > 0">
+
+      <div class="col">
+        <h2 class="text-center">in ICU.</h2>
+        <line-chart
+          :chartData="arrInIcu"
+          :options="chartOptions"
+          label="In ICU"
+          :chartColors="inIcuColors">
+        </line-chart>
+      </div>
+    </div>
+
+    <div class="row mt-5" v-if="arrOnVentilators.length > 0">
+
+      <div class="col">
+        <h2 class="text-center">on ventilators.</h2>
+        <line-chart
+          :chartData="arrOnVentilators"
+          :options="chartOptions"
+          label="On Ventilators"
+          :chartColors="onVentilatorsColors">
+        </line-chart>
+      </div>
+    </div>
+
+    <div class="row mt-5" v-if="arrRecovered.length > 0">
+
+      <div class="col">
+        <h2 class="text-center">recovered.</h2>
+        <line-chart
+          :chartData="arrRecovered"
+          :options="chartOptions"
+          label="Recovered"
+          :chartColors="recoveredColors">
+        </line-chart>
+      </div>
+    </div>
+
+    <div class="row mt-5" v-if="arrDeaths.length > 0">
+
+      <div class="col">
+        <h2 class="text-center">deaths.</h2>
+        <line-chart
+          :chartData="arrDeaths"
+          :options="chartOptions"
+          label="Deaths"
+          :chartColors="deathColors">
         </line-chart>
       </div>
     </div>
@@ -31,11 +106,47 @@ export default {
     return {
 
       arrPositive: [],
+      positiveChartColors: {
+        borderColor: "rgb(191,154,202)",
+        pointBorderColor: "#0E1428",
+        pointBackgroundColor: "rgba(191,154,202,0.7)",
+        backgroundColor: "rgba(191,154,202,0.7)"
+      },
       arrHospitalized: [],
+      hospitalizedChartColors: {
+        borderColor: "rgba(142,65,98,0.7)",
+        pointBorderColor: "#260F26",
+        pointBackgroundColor: "rgba(142,65,98,0.6)",
+        backgroundColor: "rgba(142,65,98,0.6)"
+      },
       arrInIcu: [],
+      inIcuColors: {
+        borderColor: "rgb(199,232,243)",
+        pointBorderColor: "#190B28",
+        pointBackgroundColor: "rgba(199,232,243,0.6)",
+        backgroundColor: "rgba(199,232,243,0.6)"
+      },
       arrOnVentilators: [],
+      onVentilatorsColors: {
+        borderColor: "rgba(65,57,62,0.6)",
+        pointBorderColor: "#784F41",
+        pointBackgroundColor: "rgba(65,57,62,0.5)",
+        backgroundColor: "rgba(65,57,62,0.5)"
+      },
       arrRecovered: [],
+      recoveredColors: {
+        borderColor: "rgb(237,162,192)",
+        pointBorderColor: "#4E5E66",
+        pointBackgroundColor: "rgba(237,162,192,0.6)",
+        backgroundColor: "rgba(237,162,192,0.6)"
+      },
       arrDeaths: [],
+       deathColors: {
+        borderColor: "rgba(64,42,44,0.9)",
+        pointBorderColor: "#E06D06",
+        pointBackgroundColor: "rgba(64,42,44,0.8)",
+        backgroundColor: "rgba(64,42,44,0.8)"
+      },
       chartOptions: {
         responsive:true,
         maintainAspectRatio: false
@@ -71,4 +182,8 @@ export default {
 </script>
 
 <style>
+.text-center {
+  font-family: Raleway;
+  font-size: 25px;
+}
 </style>
