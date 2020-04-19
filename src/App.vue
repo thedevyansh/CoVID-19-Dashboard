@@ -180,3 +180,9 @@ export default {
 };
 
 </script>
+
+<style>
+.text-center {
+  font-family: Raleway
+}
+</style>
