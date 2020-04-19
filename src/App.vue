@@ -4,8 +4,8 @@
     <div class="row mt-5">
 
       <div class="col">
-        <h2 class="text-center" style="font-family: Gotham;">
-          COVID-19 STATISTICS</h2>
+        <h3 class="text-center">
+          COVID-19 STATISTICS</h3>
       </div>
 
     </div>
@@ -13,7 +13,7 @@
     <div class="row mt-5" v-if="arrPositive.length > 0">
 
       <div class="col">
-        <h2 class="text-center">positive.</h2>
+        <h4 class="text-center">positive.</h4>
         <line-chart
           :chartData="arrPositive"
           :options="chartOptions"
@@ -26,7 +26,7 @@
     <div class="row mt-5" v-if="arrHospitalized.length > 0">
 
       <div class="col">
-        <h2 class="text-center">hospitalized.</h2>
+        <h4 class="text-center">hospitalized.</h4>
         <line-chart
           :chartData="arrHospitalized"
           :options="chartOptions"
@@ -39,7 +39,7 @@
     <div class="row mt-5" v-if="arrInIcu.length > 0">
 
       <div class="col">
-        <h2 class="text-center">in ICU.</h2>
+        <h4 class="text-center">in ICU.</h4>
         <line-chart
           :chartData="arrInIcu"
           :options="chartOptions"
@@ -52,7 +52,7 @@
     <div class="row mt-5" v-if="arrOnVentilators.length > 0">
 
       <div class="col">
-        <h2 class="text-center">on ventilators.</h2>
+        <h4 class="text-center">on ventilators.</h4>
         <line-chart
           :chartData="arrOnVentilators"
           :options="chartOptions"
@@ -65,7 +65,7 @@
     <div class="row mt-5" v-if="arrRecovered.length > 0">
 
       <div class="col">
-        <h2 class="text-center">recovered.</h2>
+        <h4 class="text-center">recovered.</h4>
         <line-chart
           :chartData="arrRecovered"
           :options="chartOptions"
@@ -78,7 +78,7 @@
     <div class="row mt-5" v-if="arrDeaths.length > 0">
 
       <div class="col">
-        <h2 class="text-center">deaths.</h2>
+        <h4 class="text-center">deaths.</h4>
         <line-chart
           :chartData="arrDeaths"
           :options="chartOptions"
@@ -180,10 +180,3 @@ export default {
 };
 
 </script>
-
-<style>
-.text-center {
-  font-family: Raleway;
-  font-size: 25px;
-}
-</style>
