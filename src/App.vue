@@ -86,6 +86,10 @@
           :chartColors="deathColors">
         </line-chart>
       </div>
+    </div><br><br>
+
+    <div class="text-center mb-4">
+     <button href="#" type="button" class="btn btn-primary btn-sm">Search NY Times</button>
     </div>
 
   </div>
