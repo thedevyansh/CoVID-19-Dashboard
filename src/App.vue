@@ -89,7 +89,8 @@
     </div><br><br>
 
     <div class="text-center mb-4">
-     <button href="#" type="button" class="btn btn-primary btn-sm">Search NY Times</button>
+   <a class="btn btn-primary btn-sm" href="https://thedevyansh.github.io/nytimes">
+       Search NY Times</a>
     </div>
 
   </div>
