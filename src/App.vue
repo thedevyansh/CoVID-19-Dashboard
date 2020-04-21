@@ -6,6 +6,8 @@
       <div class="col">
         <h3 class="text-center">
           COVID-19 STATISTICS</h3>
+          <h6 class="text-center">
+            Data available for US states and territories</h6>
       </div>
 
     </div>
