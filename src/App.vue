@@ -6,8 +6,8 @@
       <div class="col">
         <h3 class="text-center">
           COVID-19 STATISTICS</h3>
-          <h6 class="text-center">
-            Data available for US states and territories</h6>
+          <h6 class="text-center"><span>
+            Data available for US states and territories</span></h6>
       </div>
 
     </div>
@@ -93,6 +93,10 @@
     <div class="text-center mb-4">
    <a class="btn btn-primary btn-sm" href="https://thedevyansh.github.io/nytimes">
        Search NY Times</a>
+    </div>
+
+    <div class="text-center mb-3">
+      developed with 🖤 by Devyansh
     </div>
 
   </div>
@@ -189,7 +193,19 @@ export default {
 </script>
 
 <style>
+body {
+  background-image: url('bg1.jpg');
+  background-attachment: fixed;
+}
+
 .text-center {
   font-family: Raleway
+}
+
+h6 span{
+  background-color: #3C1053FF;
+  padding: 2px 8px;
+  border-radius: 20px;
+  color: #FFFFFF
 }
 </style>
