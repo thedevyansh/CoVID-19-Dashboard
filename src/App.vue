@@ -206,8 +206,9 @@ body {
 
 h6 span{
   background-color: #3C1053FF;
+  opacity: 0.7;
   padding: 2px 8px;
   border-radius: 20px;
-  color: #FFFFFF
+  color: #FFFFFF;
 }
 </style>
